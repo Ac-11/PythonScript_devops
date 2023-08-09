@@ -25,6 +25,6 @@ class Check_Docker_and_DockerCompose:
             print("Docker compose is already installed")
         else:
             print("Docker compose is not installed")
-            #install docker-compose
+
             os.system("sudo apt install docker-compose")
             print("Docker compose is installed")
