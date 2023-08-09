@@ -5,16 +5,16 @@ import webbrowser
 import subprocess
 
 
-class Check_Docker_and_DockerCompose:
+class Docker_and_DockerCompose_Check:
     def __init__(self):
         self.docker="docker"
         self.docker_compose="docker-compose"
 
-    def ispresent(self):
+    def ifpresent(self):
         if os.system("docker --version") == 0:
             print("Docker already installed")
         else:
-            print("Docker not installed ")
+            print("Docker not installed")
             
             os.system("curl -fsSL https://get.docker.com -o get-docker.sh")
             os.system("sh get-docker.sh")
@@ -25,6 +25,5 @@ class Check_Docker_and_DockerCompose:
             print("Docker compose is already installed")
         else:
             print("Docker compose is not installed")
-
             os.system("sudo apt install docker-compose")
             print("Docker compose is installed")
