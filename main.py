@@ -22,6 +22,7 @@ class DockerHelper:
         if os.system(f"{self.docker_compose} --version") == 0:
             print("Docker-compose is already installed on the system")
         else:
+            
             print("Docker-compose is not installed on the system")
             os.system("sudo apt install docker-compose")
             print("Docker-compose is installed on the system")
@@ -87,4 +88,21 @@ MYSQL_PASSWORD=wordpress
 
         print(f"WordPress site is now running, access it with http://{self.site_name}:8080")
         webbrowser.open(f"https://{self.site_name}:8080")
+class WordPressSiteManager:
+    def __init__(self, site_name):
+        self.site_name = site_name
+
+    def enable(self):
+        os.chdir("wordpress")
+        subprocess.run(["docker-compose", "start"])
+
+    def disable(self):
+        os.chdir("wordpress")
+        subprocess.run(["docker-compose", "stop"])
+
+    def delete(self):
+        os.chdir("wordpress")
+        subprocess.run(["docker-compose", "down"])
+        os.system(f"sudo rm -rf wordpress/")
+        os.system(f"sudo sed -i /{self.site_name}/d /etc/hosts")
 
