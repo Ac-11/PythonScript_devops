@@ -103,3 +103,14 @@ sudo python3 script.py delete example.com
 ![u](Ss_readme/u6.png)
 
 ![u](Ss_readme/u7.png)
+
+#### Task 7: Add one more subcommand to delete the site (deleting containers and local files).
+
+```bash
+
+#delete wordpress container
+sudo python3 script.py delete example.com
+
+```
+![u](Ss_readme/u8.png)
+
