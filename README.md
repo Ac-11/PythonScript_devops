@@ -151,53 +151,53 @@ In summary, this code is a command-line tool for managing WordPress sites using 
 
 If you experience issues while using the script, here are some common problems you might encounter along with their solutions.
 
-1. Docker or Docker Compose Not Installed
+- Docker or Docker Compose Not Installed
 Problem: You might encounter an error related to Docker or Docker Compose not being installed on your system.
 Solution:
 
 Run the command: docker --version and docker-compose --version to check if Docker and Docker Compose are installed.
 If they are not installed, run the command mentioned in the script to install them: python script_name.py install.
-2. Permission Errors
+- Permission Errors
 Problem: You might encounter permission errors while running the script.
 
 Solution:
 
 Ensure that you are running the script with appropriate permissions, especially if the script requires administrative privileges to perform certain tasks.
 If needed, use sudo before the script command to execute it with administrative privileges: sudo python script_name.py.
-3. Site Not Accessible in Browser
+- Site Not Accessible in Browser
 Problem: After creating a site, you might not be able to access it in the browser.
 
 Solution:
 
 Check if the containers are running using the command: docker ps.
 Ensure that you are trying to access the site using the correct URL and port (e.g., http://example.com:8080).
-4. Invalid Site Name
+- Invalid Site Name
 Problem: You might encounter issues if you provide an invalid site name.
 
 Solution:
 
 Make sure the site name you provide contains only valid characters (alphabets, numbers, hyphens) and does not contain spaces or special characters.
-5. Hosts File Modification
+- Hosts File Modification
 Problem: You might face issues with modifying the hosts file.
 
 Solution:
 
 If modifying the hosts file fails due to permissions, you might need to run the script with administrative privileges using sudo.
-6. Uninstalling or Deleting a Site
+- Uninstalling or Deleting a Site
 Problem: You might have trouble uninstalling or deleting a site.
 
 Solution:
 
 Use the appropriate subcommand to delete a site: python script_name.py delete site_name.
 If you encounter errors, ensure that you are providing the correct site name and that the site's containers are stopped before attempting deletion.
-7. Miscellaneous Errors
+- Miscellaneous Errors
 Problem: You might encounter other unexpected errors or issues.
 
 Solution:
 
 Check the error message provided by the script to understand the nature of the problem.
 If possible, search for the error message online or consult the official documentation of the tools you are using.
-8. Getting Help
+- Getting Help
 If you are unable to resolve the issue using the solutions provided above, feel free to open an issue on this repository. Provide detailed information about the problem you are facing, including error messages, steps you took, and the operating system you are using. This will help us assist you better.
 
 ## Scope of Improvement
