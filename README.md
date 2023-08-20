@@ -36,14 +36,14 @@ This script aims to simplify the process of setting up and managing WordPress si
 #Run the python script to execute
 sudo python3 script.py create example.com
 ```
-![Untitled](C:\Users\chatt\OneDrive\Desktop\RT_CAMP\PythonScript_devops\Screenshots for readme\Screenshot 2023-08-21 011349.png)
+![Untitled](Screenshots for readme\Screenshot 2023-08-21 011349.png)
 
 1. now we can access the site by using following methods, our site listens to port 8080 as we exposed to to that port.
     
     
     site_name we specified eg: example.com:8080
     
-    ![Untitled](attachments/Untitled%201.png)
+    ![u](Ss_readme/u.png)
     
     use [localhost:8080](http://localhost:8080) 
     
