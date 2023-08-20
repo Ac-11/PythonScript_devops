@@ -4,7 +4,6 @@
 Welcome to the Dockerized WordPress LEMP Stack Script using python.
 This script aims to simplify the process of setting up and managing WordPress sites using a LEMP stack within Docker containers.  With support of Pyhton as scripting language and a range of features including dependency management, site creation, enabling/disabling, and deletion.
 
-
 ## Outlines of Assigment
 - Task 1: Check if docker and docker-compose is installed on the system. If not present, install the missing packages.
 - Task 2: The script should be able to create a WordPress site using the latest WordPress Version. Please provide a way for the user to provide the site name as a command-line argument.
@@ -13,7 +12,6 @@ This script aims to simplify the process of setting up and managing WordPress si
 - Task 5: Prompt the user to open example.com in a browser if all goes well and the site is up and healthy.
 - Task 6: Add another subcommand to enable/disable the site (stopping/starting the containers)
 - Task 7: Add one more subcommand to delete the site (deleting containers and local files).
-
 
 ## Explanation in detail with screenshots
 
@@ -50,6 +48,7 @@ sudo python3 script.py create example.com
 ![u](Ss_readme/u1.png)
 
 #### Task 3:  It must be a LEMP stack running inside containers (Docker) and a docker-compose file is a must.
+
 ```bash
 #Docker compose file specifications
 version: '3'
@@ -113,4 +112,10 @@ sudo python3 script.py delete example.com
 
 ```
 ![u](Ss_readme/u8.png)
+
+## Additional Information
+
+- Why is used Pyhton : 
+Using Python for this task offers several benefits. Its clean syntax and readability make the script easy to understand and maintain. Python's cross-platform nature ensures compatibility across various operating systems. Its extensive library ecosystem provides tools for tasks beyond basic scripting, while its dynamic nature facilitates rapid development and prototyping. With an active community and abundant online resources, Python is a reliable choice for utility scripts. Additionally, my familiarity with Python allows me to confidently write and modify the script efficiently.
+- 
 

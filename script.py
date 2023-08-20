@@ -4,6 +4,7 @@ import argparse
 import webbrowser
 import subprocess
 
+# Check for docker and docker and docker_compose if not present install
 class DockerHelper:
     def __init__(self):
         self.docker = "docker"
@@ -26,7 +27,7 @@ class DockerHelper:
             print("Docker-compose is not installed on the system")
             os.system("sudo apt install docker-compose")
             print("Docker-compose is installed on the system")
-
+ # Create word press container
 class WordPressSiteCreator:
     def __init__(self, site_name):
         self.site_name = site_name
@@ -75,7 +76,7 @@ volumes:
         with open(".env", "w") as f:
             f.write(
                 """
-MYSQL_ROOT_PASSWORD=somewordpress
+MYSQL_ROOT_PASSWORD=wordpress
 MYSQL_DATABASE=wordpress
 MYSQL_USER=wordpress
 MYSQL_PASSWORD=wordpress
@@ -88,6 +89,8 @@ MYSQL_PASSWORD=wordpress
 
         print(f"WordPress site is now running, access it with http://{self.site_name}:8080")
         webbrowser.open(f"https://{self.site_name}:8080")
+
+# Manage WordPress Site
 class WordPressSiteManager:
     def __init__(self, site_name):
         self.site_name = site_name
@@ -105,4 +108,38 @@ class WordPressSiteManager:
         subprocess.run(["docker-compose", "down"])
         os.system(f"sudo rm -rf wordpress/")
         os.system(f"sudo sed -i /{self.site_name}/d /etc/hosts")
+        
+# Main function of the program
+def main():
+    parser = argparse.ArgumentParser(description='Create, enable, disable, or delete a WordPress site using Docker')
+    subparsers = parser.add_subparsers(dest='command')
+
+    create_parser = subparsers.add_parser('create', help='Create a new WordPress site')
+    create_parser.add_argument('site_name', help='Name of the site')
+
+    enable_parser = subparsers.add_parser('enable', help='Enable a WordPress site')
+    enable_parser.add_argument('site_name', help='Name of the site')
+
+    disable_parser = subparsers.add_parser('disable', help='Disable a WordPress site')
+    disable_parser.add_argument('site_name', help='Name of the site')
+
+    delete_parser = subparsers.add_parser('delete', help='Delete an existing WordPress site')
+    delete_parser.add_argument('site_name', help='Name of the site')
+
+    args = parser.parse_args()
+    
+    if args.command == 'create':
+        DockerHelper().is_present()
+        WordPressSiteCreator(args.site_name).create()
+    elif args.command == 'enable':
+        WordPressSiteManager(args.site_name).enable()
+    elif args.command == 'disable':
+        WordPressSiteManager(args.site_name).disable()
+    elif args.command == 'delete':
+        WordPressSiteManager(args.site_name).delete()
+    else:
+        parser.print_help()
+
+if __name__ == "__main__":
+    main()
 
