@@ -9,7 +9,7 @@ This script aims to simplify the process of setting up and managing WordPress si
 - Task 1: Check if docker and docker-compose is installed on the system. If not present, install the missing packages.
 - Task 2: The script should be able to create a WordPress site using the latest WordPress Version. Please provide a way for the user to provide the site name as a command-line argument.
 - Task 3: It must be a LEMP stack running inside containers (Docker) and a docker-compose file is a must.
-- Task 4.Create a /etc/hosts entry for example.com pointing to localhost. Here we are assuming the user has provided example.com as the site name.
+- Task 4: Create a /etc/hosts entry for example.com pointing to localhost. Here we are assuming the user has provided example.com as the site name.
 - Task 5: Prompt the user to open example.com in a browser if all goes well and the site is up and healthy.
 - Task 6: Add another subcommand to enable/disable the site (stopping/starting the containers)
 - Task 7: Add one more subcommand to delete the site (deleting containers and local files).
@@ -30,12 +30,13 @@ This script aims to simplify the process of setting up and managing WordPress si
 3. Go to the directory and run the script
 `cd PYTHONSCRIPT_DEVOPS`
 
-#### Check if docker and docker-compose is installed on the system. If not present, install the missing packages.
+#### Task 1: Check if docker and docker-compose is installed on the system. If not present, install the missing packages.
 
 ```bash
 #Run the python script to execute
 sudo python3 script.py create example.com
 ```
+![Untitled](C:\Users\chatt\OneDrive\Desktop\RT_CAMP\PythonScript_devops\Screenshots for readme\Screenshot 2023-08-21 011349.png)
 
 1. now we can access the site by using following methods, our site listens to port 8080 as we exposed to to that port.
     
