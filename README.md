@@ -88,3 +88,18 @@ services:
 ![u](Ss_readme/u4.png)
 
 ![u](Ss_readme/u5.png)
+
+#### Task 6: Add another subcommand to enable/disable the site (stopping/starting the containers)
+
+```bash
+
+#to enable or start wordpress container
+sudo python3 script.py enable example.com
+
+#to delete the wordpress container 
+sudo python3 script.py delete example.com
+
+```
+![u](Ss_readme/u6.png)
+
+![u](Ss_readme/u7.png)
