@@ -38,6 +38,17 @@ sudo python3 script.py create example.com
 ```
 ![u](Ss_readme/u.png)
 
+#### Task 2: The script should be able to create a WordPress site using the latest WordPress Version. Please provide a way for the user to provide the site name as a command-line argument.
+
+```bash
+#to create wordpress site
+sudo python3 script.py create "SiteNameyouWant"
+
+#to create a wordpress site named example.com
+sudo python3 script.py create example.com
+```
+![u](Ss_readme/u1.png)
+
 1. now we can access the site by using following methods, our site listens to port 8080 as we exposed to to that port.
     
     
