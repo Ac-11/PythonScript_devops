@@ -1,12 +1,12 @@
 # rtCamp DevOps Engineer Assignment
 
 ## Description
-Welcome to the Dockerized WordPress LEMP Stack Script using python.
-This script aims to simplify the process of setting up and managing WordPress sites using a LEMP stack within Docker containers.  With support of Pyhton as scripting language and a range of features including dependency management, site creation, enabling/disabling, and deletion.
+Welcome to the Dockerized WordPress LEMP Stack Script using Python.
+This script aims to simplify the process of setting up and managing WordPress sites using a LEMP stack within Docker containers.  With the support of Python as scripting language and a range of features including dependency management, site creation, enabling/disabling, and deletion.
 
-## Outlines of Assigment
-- Task 1: Check if docker and docker-compose is installed on the system. If not present, install the missing packages.
-- Task 2: The script should be able to create a WordPress site using the latest WordPress Version. Please provide a way for the user to provide the site name as a command-line argument.
+## Outlines of Assignment
+- Task 1: Check if docker and docker-compose are installed on the system. If not present, install the missing packages.
+- Task 2: The script should be able to create a WordPress site using the latest WordPress Version. Please provide a way for the user to give the site name as a command-line argument.
 - Task 3: It must be a LEMP stack running inside containers (Docker) and a docker-compose file is a must.
 - Task 4: Create a /etc/hosts entry for example.com pointing to localhost. Here we are assuming the user has provided example.com as the site name.
 - Task 5: Prompt the user to open example.com in a browser if all goes well and the site is up and healthy.
@@ -16,7 +16,7 @@ This script aims to simplify the process of setting up and managing WordPress si
 ## Explanation in detail with screenshots
 
 ### Development Details
-- Langauge Used: Pyhton
+- Language Used: Python
 - Code Editor Used: VsCode
 - Development Platform: Windows 11
 - Testing Platform: Ubuntu 20.04.2 LTS
@@ -28,7 +28,7 @@ This script aims to simplify the process of setting up and managing WordPress si
 3. Go to the directory and run the script
 `cd PYTHONSCRIPT_DEVOPS`
 
-#### Task 1: Check if docker and docker-compose is installed on the system. If not present, install the missing packages.
+#### Task 1: Check if docker and docker-compose are installed on the system. If not present, install the missing packages.
 
 ```bash
 #Run the python script to execute
@@ -39,7 +39,7 @@ sudo python3 script.py create example.com
 #### Task 2: The script should be able to create a WordPress site using the latest WordPress Version. Please provide a way for the user to provide the site name as a command-line argument.
 
 ```bash
-#to create wordpress site
+#to create WordPress site
 sudo python3 script.py create "SiteNameyouWant"
 
 #to create a wordpress site named example.com
@@ -58,9 +58,9 @@ services:
     restart: always
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 1
-      MYSQL_DATABASE: wordpress_database
-      MYSQL_USER: yourname
-      MYSQL_PASSWORD: yourpassword
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
     volumes:
       - db_data:/var/lib/mysql
   wordpress:
