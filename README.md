@@ -15,29 +15,14 @@ This script aims to simplify the process of setting up and managing WordPress si
 - 7.Add one more subcommand to delete the site (deleting containers and local files).
 
 
-# Task
+## Explanation in detail with screenshots
 
-To create a command-line script, preferably in Bash, PHP, Node, or Python to perform the following tasks https://rtcamp.com/assignments/devops-engineer/:
+- Langauge Used: Pyhton
+- Code Editor Used: VsCode
+- Development Platform: Windows 11
+- Testing Platform: Ubuntu 20.04.2 LTS
 
-<details>
-<summary>tasks and guidelines</summary>
-    1. Check if `docker` and `docker-compose` is installed on the system. If not present, install the missing packages.<br>
-    2. The script should be able to create a WordPress site using the latest WordPress Version. Please provide a way for the user to provide the site name as a command-line argument.<br>
-    3. It must be a LEMP stack running inside containers (Docker) and a docker-compose file is a must.<br>
-    4. Create a `/etc/hosts` entry for *example.com* pointing to localhost. Here we are assuming the user has provided *example.com* as the site name.<br>
-    5. Prompt the user to open *example.com* in a browser if all goes well and the site is up and healthy.<br>
-    6. Add another subcommand to enable/disable the site (stopping/starting the containers)<br>
-    7. Add one more subcommand to delete the site (deleting containers and local files).<br>
-    
-    Submission Guidelines<br>
-    
-    - CLIG Guidelines ➞ Please follow [Command Line Interface Guidelines](https://clig.dev/).
-    - Source Code Hosting ➞ You must use GitHub *(recommended)* or GitLab for source code hosting.
-    - Readme.md ➞ Your must have a very well written readme describing how to install your script, how to run different command & sub-commands in markdown format.
-</details>
-
-
-## How to run the script
+###s How to run the script
 
 1. Fork the repository to your remote repository using the fork button
 2. open the terminal and clone repository, this will create a folder named `rtCamp_DevOps_Project` automatically or have your preferred name.
