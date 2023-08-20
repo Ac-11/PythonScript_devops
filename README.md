@@ -17,16 +17,18 @@ This script aims to simplify the process of setting up and managing WordPress si
 
 ## Explanation in detail with screenshots
 
+### Development Details
 - Langauge Used: Pyhton
 - Code Editor Used: VsCode
 - Development Platform: Windows 11
 - Testing Platform: Ubuntu 20.04.2 LTS
 
-### s How to run the script
-
-1. Fork the repository to your remote repository using the fork button
-2. open the terminal and clone repository, this will create a folder named `rtCamp_DevOps_Project` automatically or have your preferred name.
-3. `cd` to the directory and run the script
+### How to run the script
+1. Start by clicking the "Fork" button at the top right corner of the repository page to create your own copy of the repository on your GitHub account.
+2. Open the terminal and use the following command to clone the repository. This will automatically create a folder named "PYTHONSCRIPT_DEVOPS" or use your preferred folder name.
+`git clone https://github.com/Dineshkumar-S99/rtCamp_DevOps_Project.git`
+3. Go to the directory and run the script
+`cd rtCamp_DevOps_Project`
 
 the format of the script as follows:
 
