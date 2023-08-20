@@ -197,8 +197,7 @@ Solution:
 
 Check the error message provided by the script to understand the nature of the problem.
 If possible, search for the error message online or consult the official documentation of the tools you are using.
-- Getting Help
-If you are unable to resolve the issue using the solutions provided above, feel free to open an issue on this repository. Provide detailed information about the problem you are facing, including error messages, steps you took, and the operating system you are using. This will help us assist you better.
+- If you are unable to resolve the issue using the solutions provided above, feel free to open an issue on this repository. Provide detailed information about the problem you are facing, including error messages, steps you took, and the operating system you are using. This will help us assist you better.
 
 ## Scope of Improvement
 
