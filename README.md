@@ -49,6 +49,38 @@ sudo python3 script.py create example.com
 ```
 ![u](Ss_readme/u1.png)
 
+#### Task 3:  It must be a LEMP stack running inside containers (Docker) and a docker-compose file is a must.
+```bash
+#Docker compose file specifications
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_DATABASE: wordpress_database
+      MYSQL_USER: yourname
+      MYSQL_PASSWORD: yourpassword
+    volumes:
+      - db_data:/var/lib/mysql
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    restart: always
+    ports:
+      - '8080:80'
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress:/var/www/html
+```
+
+
 1. now we can access the site by using following methods, our site listens to port 8080 as we exposed to to that port.
     
     
