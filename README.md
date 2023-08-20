@@ -115,7 +115,11 @@ sudo python3 script.py delete example.com
 
 ## Additional Information
 
-- Why is used Pyhton : 
+- Why I used Pyhton : 
 Using Python for this task offers several benefits. Its clean syntax and readability make the script easy to understand and maintain. Python's cross-platform nature ensures compatibility across various operating systems. Its extensive library ecosystem provides tools for tasks beyond basic scripting, while its dynamic nature facilitates rapid development and prototyping. With an active community and abundant online resources, Python is a reliable choice for utility scripts. Additionally, my familiarity with Python allows me to confidently write and modify the script efficiently.
-- 
+- Imported Packages:
+`os`: This module provides a way to use operating system-dependent functionality like reading or writing to the file system.
+`argparse`: This module makes it easy to write user-friendly command-line interfaces. It helps parse command-line arguments and options.
+`webbrowser`: This module provides a high-level interface for displaying web-based documents to users.
+`subprocess`: This module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes.
 
