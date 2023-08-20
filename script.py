@@ -4,7 +4,7 @@ import argparse
 import webbrowser
 import subprocess
 
-# Check for docker and docker and docker_compose if not present install
+# Check for docker and docker and docker_compose if not present install for more information refer to addtional information section in ReadMe file 
 class DockerHelper:
     def __init__(self):
         self.docker = "docker"
@@ -27,7 +27,7 @@ class DockerHelper:
             print("Docker-compose is not installed on the system")
             os.system("sudo apt install docker-compose")
             print("Docker-compose is installed on the system")
- # Create word press container
+ # Create word press container for more information refer to addtional information section in ReadMe file
 class WordPressSiteCreator:
     def __init__(self, site_name):
         self.site_name = site_name
@@ -90,7 +90,7 @@ MYSQL_PASSWORD=wordpress
         print(f"WordPress site is now running, access it with http://{self.site_name}:8080")
         webbrowser.open(f"https://{self.site_name}:8080")
 
-# Manage WordPress Site
+# Manage WordPress Site for more iformation refer to addtional information section in ReadMe file
 class WordPressSiteManager:
     def __init__(self, site_name):
         self.site_name = site_name
@@ -109,7 +109,7 @@ class WordPressSiteManager:
         os.system(f"sudo rm -rf wordpress/")
         os.system(f"sudo sed -i /{self.site_name}/d /etc/hosts")
         
-# Main function of the program
+# Main function of the program for more iformation refer to addtional information section in ReadMe file
 def main():
     parser = argparse.ArgumentParser(description='Create, enable, disable, or delete a WordPress site using Docker')
     subparsers = parser.add_subparsers(dest='command')
