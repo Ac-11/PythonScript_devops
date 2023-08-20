@@ -122,4 +122,32 @@ Using Python for this task offers several benefits. Its clean syntax and readabi
 `argparse`: This module makes it easy to write user-friendly command-line interfaces. It helps parse command-line arguments and options.
 `webbrowser`: This module provides a high-level interface for displaying web-based documents to users.
 `subprocess`: This module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes.
+- DockerHelper:
+This class checks for the presence of Docker and Docker Compose on the system. If they are not present, it installs them.
+The is_present method checks for the existence of Docker and Docker Compose executables using the `os.system` command. If not present, it downloads and installs them using shell commands.
+- WordPressSiteCreator:
+This class is responsible for creating a new WordPress site using Docker containers.The create method performs the following steps:
+Creates a directory named `wordpress` to store the necessary files.
+Copies a file named `s1.py` to the `wordpress` directory.
+Creates a Docker Compose configuration file `docker-compose.yml` for the WordPress site.
+Creates an environment file `.env` to provide environment variables to the Docker containers.
+Uses subprocess.run to start the Docker containers using the docker-compose up command.
+Modifies the system's hosts file to include an entry for the site name.
+Prints a message with the site URL and opens the site in a web browser.
+- WordPressSiteManager:
+This class manages an existing WordPress site created with Docker containers.
+The enable method starts the Docker containers for the site using docker-compose start.
+The disable method stops the Docker containers for the site using docker-compose stop.
+The delete method stops and removes the Docker containers, deletes the `wordpress` directory, and removes the site name from the system's hosts file.
+- Main Function (main):
+The main function is the entry point of the program.
+It uses the argparse module to create a command-line interface with subcommands for different actions: create, enable, disable, and delete.
+The user's input is parsed using argparse to determine the desired action and site name.
+Depending on the action, the appropriate methods from DockerHelper, WordPressSiteCreator, and WordPressSiteManager classes are called.
+If an invalid action is provided, the help message is printed.
+In summary, this code is a command-line tool for managing WordPress sites using Docker containers. It provides functionality to create, enable, disable, and delete WordPress sites, handling the installation of Docker and Docker Compose if necessary. The code makes use of various Python packages to interact with the system and manage Docker containers effectively.
+
+
+
+
 
